@@ -3,7 +3,7 @@
 Author: Lerie Taylor
 Date: 2021
 Filename: plugins/MyProduct.class.php
-Description: Interface for the PDO wrapper
+Description: Interface for the Products
 */
 
 include_once("core/IProduct.class.php");
@@ -25,7 +25,7 @@ class MyProduct implements IProduct
 
 	public function save()
 	{
-		$db = new MyDb();
+		//$db = new MyDb();
 	}
 }
 ?>

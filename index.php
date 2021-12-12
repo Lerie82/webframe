@@ -8,6 +8,7 @@ Description: index controller
 error_reporting(E_ALL & ~E_NOTICE); //display only errors, no notices!
 session_start();
 
+
 /// autoload the core directory
 spl_autoload_register(function ($class)
 {
@@ -24,9 +25,15 @@ $user->setAuthLevel(0);
 $db = new MyDB();
 $results1 = $db->queryForCols("web","id,ip");
 
+/// a new product
 $prod = new MyProduct();
 $prod->new("My first product","12.99","This is a small short description to fill out some db space.");
 $prod->save();
 
-die(var_dump($prod));
+/// new blog post
+$blog = new MyBlog();
+$blog->createPost();
+$blog->updatePost("my blog title", "hello world!", "Lerie Taylor");
+
+die(var_dump($blog));
 ?>

@@ -9,7 +9,7 @@ Description: Interface for the PDO wrapper
 interface IProduct
 {
 	public function __construct();
-	public function new($name,$price,$descr);
+	public function new($name, $price, $descr);
 	public function save();
 }
 ?>
