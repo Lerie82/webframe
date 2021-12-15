@@ -35,5 +35,14 @@ $blog = new MyBlog();
 $blog->createPost();
 $blog->updatePost("my blog title", "hello world!", "Lerie Taylor");
 
-die(var_dump($blog));
+/// new movie
+$movie = new MyMovie();
+$movie->setIMDBID("tt0080761");
+$movie->fillFromIMDB();
+
+/*$scraper = new MyScraper();
+$scraper->setUrl("https://www.imdb.com/title/tt0080761/");
+$scraper->scrape();*/
+
+die(var_dump($movie));
 ?>

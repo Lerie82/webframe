@@ -3,5 +3,6 @@
 	"db_user":"root",
 	"db_pass":"",
 	"db_name":"scans",
-	"timezone":"America/Phoenix"
+	"timezone":"America/Phoenix",
+	"cache_dir":"cache"
 }
