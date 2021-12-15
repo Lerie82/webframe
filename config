@@ -4,5 +4,6 @@
 	"db_pass":"",
 	"db_name":"scans",
 	"timezone":"America/Phoenix",
-	"cache_dir":"cache"
+	"cache_dir":"cache",
+	"plugin_dir":"plugins"
 }

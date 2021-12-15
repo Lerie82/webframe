@@ -2,7 +2,7 @@
 A Web library for template development.
 
 ## Usage
-You must include the library. You can view code samples in the index.php file.
+You must include the library. You can view code samples in the **EXAMPLES** file.
 
 ## Configuration
 You can configure the core script using the following pre-defined JSON properties in the file named **config**.
@@ -13,6 +13,7 @@ You can configure the core script using the following pre-defined JSON propertie
 - db_name
 - timezone
 - cache_dir
+- plugin_dir
 
 ## Current Library
 There is current interface support for a variety of different objects that include, but are not limited to the following:

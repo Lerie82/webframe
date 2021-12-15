@@ -3,16 +3,16 @@
 Author: Lerie Taylor
 Date: 2021
 Filename: index.php
-Description: index controller
+Description: index examples
 */
 error_reporting(E_ALL & ~E_NOTICE); //display only errors, no notices!
 session_start();
 
-
 /// autoload the core directory
 spl_autoload_register(function ($class)
 {
-    include_once('plugins/'.$class.'.class.php');
+    $config = json_decode(file_get_contents("config"));
+    include_once($config->plugin_dir."/".$class.".class.php");
 });
 
 /// a new user
@@ -30,7 +30,6 @@ $prod = new MyProduct();
 $prod->new("My first product","12.99","This is a small short description to fill out some db space.");
 $prod->addUrl("https://example.com");
 
-
 /// new blog post
 $blog = new MyBlog();
 $blog->createPost();
@@ -43,5 +42,5 @@ $movie->fillFromIMDB();
 
 /// 
 
-die(var_dump($movie));
+die(var_dump($results1));
 ?>
