@@ -33,5 +33,41 @@ class MyUser implements IPerson
 	{
 		return $this->level;
 	}
+
+
+	public function isAlive()
+	{
+		//
+	}
+
+	public function getBirthday()
+	{
+		//
+	}
+
+	public function getEmail()
+	{
+		//
+	}
+
+	public function setEmail($email)
+	{
+		//
+	}
+
+	public function setSocial($ssn)
+	{
+		//
+	}
+
+	public function setBirthday($date)
+	{
+		//
+	}
+
+	public function setDeathDate($date)
+	{
+		//
+	}
 }
 ?> 

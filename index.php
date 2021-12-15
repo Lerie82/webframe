@@ -28,7 +28,8 @@ $results1 = $db->queryForCols("web","id,ip");
 /// a new product
 $prod = new MyProduct();
 $prod->new("My first product","12.99","This is a small short description to fill out some db space.");
-$prod->save();
+$prod->addUrl("https://example.com");
+
 
 /// new blog post
 $blog = new MyBlog();
@@ -37,7 +38,7 @@ $blog->updatePost("my blog title", "hello world!", "Lerie Taylor");
 
 /// new movie
 $movie = new MyMovie();
-$movie->setIMDBID("tt0080761");
+$movie->setIMDBID("tt0052520");
 $movie->fillFromIMDB();
 
 /*$scraper = new MyScraper();

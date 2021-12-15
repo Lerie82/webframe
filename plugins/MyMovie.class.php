@@ -23,7 +23,7 @@ class MyMovie implements IMovie
 
 	public function getInfo()
 	{
-		//
+		return json_encode(array($this->imdb_id,$this->year,$this->image,$this->keywords, $this->title, $this->description));
 	}
 
 	public function fillFromIMDB()
@@ -41,9 +41,13 @@ class MyMovie implements IMovie
 		preg_match_all("/\"keywords\"\:\"([a-zA-Z0-9,\s]+)\"/", $cache, $keywords);
 		$this->keywords = $keywords[1][0];
 
-		preg_match_all("/\"image\"\:\"([a-zA-Z0-9@_\/]+\"/m", $cache, $images);
-		die(var_dump($images));
+		preg_match_all("/\"image\"\:\"([a-zA-Z0-9@_\/]+)\"/m", $cache, $images);
+		preg_match_all("/\"name\"\:\"([a-zA-Z0-9\s]+)\"/", $cache, $titles);
+		preg_match_all("/\"description\"\:\"([a-zA-Z0-9\s,\.]+)\"/", $cache, $descrs);
+
 		$this->image = $images[1][1];
+		$this->title = $titles[1][0];
+		$this->description = $descrs[1][0];
 
 		//"datePublished":"1980-05-09"
 	}
