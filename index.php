@@ -41,9 +41,7 @@ $movie = new MyMovie();
 $movie->setIMDBID("tt0052520");
 $movie->fillFromIMDB();
 
-/*$scraper = new MyScraper();
-$scraper->setUrl("https://www.imdb.com/title/tt0080761/");
-$scraper->scrape();*/
+/// 
 
 die(var_dump($movie));
 ?>
