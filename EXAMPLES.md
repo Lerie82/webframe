@@ -1,11 +1,11 @@
 ## MySQL PDO Example
-'''
+```
 /// query the database
 $db = new MyDB();
 $results1 = $db->queryForCols("web","id,ip");
-'''
+```
 
-'''
+```
 D:\wamp64\www\webframe\index.php:45:
 array (size=10)
   0 => 
@@ -48,4 +48,4 @@ array (size=10)
     array (size=2)
       'id' => int 10
       'ip' => string '128.39.198.10' (length=13)
-'''
+```
