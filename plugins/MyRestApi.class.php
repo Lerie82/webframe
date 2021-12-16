@@ -7,21 +7,22 @@ Description: Interface for REST API
 */
 
 include_once("core/IRestApi.class.php");
+
 class MyRestApi implements IRestApi
 {
 	public function __construct()
 	{
-		//
+		$this->endpoints = [];
 	}
 
 	public function addEndpoint($ep)
 	{
-		//
+		array_push($this->endpoints, $ep);
 	}
 	
 	public function removeEndpoint($ep)
 	{
-		//
+		//array_search($ep, $this->endpoints);
 	}
 	
 	public function fetch()

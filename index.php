@@ -40,7 +40,11 @@ $movie = new MyMovie();
 $movie->setIMDBID("tt0052520");
 $movie->fillFromIMDB();
 
+/// new plugin
+$plugin = new MyPlugin();
+
+
 /// 
 
-die(var_dump($results1));
+die(var_dump($plugin));
 ?>

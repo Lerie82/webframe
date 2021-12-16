@@ -5,17 +5,26 @@ Date: 2021
 Filename: plugins/MyPlugin.class.php
 Description: Plugin wrapper
 */
-include_once("core/Plugin.class.php");
+include_once("core/IPlugin.class.php");
+include_once("plugins/MyRestApi.class.php");
 
-class MyIPlugin implements IPlugin
+class MyPlugin implements IPlugin
 {
 	public function __construct()
 	{
 		$this->setInfo(
-			"Lerie's Plugin",
+			"REST API Plugin Example",
 			"1.0",
 			"Lerie Taylor"
 		);
+
+		$this->loadApi();
+	}
+
+	public function loadApi()
+	{
+		$this->api = new MyRestApi();
+		$this->api->addEndpoint("https://api.ipify.org/");
 	}
 
 	public function setInfo($name, $ver, $author)
