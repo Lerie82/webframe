@@ -44,6 +44,11 @@ class MyPlugin implements IPlugin
 
 		return json_encode($info);
 	}
+
+	public function getIpAddress()
+	{
+		return $this->fetch(0);
+	}
 }
 
 ?> 

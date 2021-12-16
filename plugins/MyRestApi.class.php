@@ -7,6 +7,7 @@ Description: Interface for REST API
 */
 
 include_once("core/IRestApi.class.php");
+include_once("plugins/MyScraper.class.php");
 
 class MyRestApi implements IRestApi
 {
@@ -25,9 +26,10 @@ class MyRestApi implements IRestApi
 		//array_search($ep, $this->endpoints);
 	}
 	
-	public function fetch()
+	public function fetch($ep_id)
 	{
-		//
+		$spider = new MyScraper();
+		//return $this->
 	}
 }
 

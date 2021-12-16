@@ -46,5 +46,5 @@ $plugin = new MyPlugin();
 
 /// 
 
-die(var_dump($plugin));
+die(var_dump($blog));
 ?>

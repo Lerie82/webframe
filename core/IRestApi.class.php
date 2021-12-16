@@ -11,6 +11,6 @@ interface IRestApi
 	public function __construct();
 	public function addEndpoint($ep);
 	public function removeEndpoint($tag);
-	public function fetch();
+	public function fetch($ep_id);
 }
 ?>
