@@ -45,7 +45,6 @@ $watcher = new MyDirWatcher();
 $watcher->addDir("cache/");
 
 /// templates
-$t = new MyTemplate("templates\\default.config");
-
+$t = new MyBlogTemplate("templates\\blog.config");
 echo $t->getHtml();
 ?>

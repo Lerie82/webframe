@@ -22,6 +22,7 @@ There is current interface support for a variety of different objects that inclu
 - A Web Scraper
 - People
 - Products
+- Templates
 
 ### Movies
 You can supply an IMDB ID (from the imdb.com URL, near the end) and the scraper will attempt to pull info from the IMDB page.
@@ -34,3 +35,34 @@ The ability to extend the interface for quick access to fill out information for
 
 ### Products
 You can manage products from various websites. There is also an option to import information from Craiglist URL's and other public marketplace websites.
+
+### Templates
+The Bootstrap framework is the only framework currently in use in the project. You must create a configuration file (JSON formatted). The config file has 3 sections: **css**, **js**, and **strings**.
+
+```
+{
+	"css": {
+		"file": [
+			"templates/frameworks/bootstrap/css/bootstrap.min.css",
+			"templates/frameworks/bootstrap/css/cover.css"
+		]
+	},
+	"js": {
+		"file": [
+			"templates/frameworks/bootstrap/js/bootstrap.min.js",
+			"https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		]
+	},
+	"strings": {
+		"title": "Cover",
+		"btn1_text": "Learn more"
+	}
+}
+```
+You will pass this file location to the template class that implements the ITemplate interface.
+
+The css and js sections are pretty straight-forward. The strings section can store any string you want. Inside the template class you can reference the strings in the config file by their key name. Below we are accessing the **title** key name in the strings section of the config file:
+
+```
+$this->addBlock("<title>".$this->t_config->title."</title>");
+```

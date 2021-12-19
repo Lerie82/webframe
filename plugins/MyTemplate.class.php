@@ -51,7 +51,7 @@ class MyTemplate
 		$this->addBlock('</body></html>');
 	}
 
-	private function addCss()
+	public function addCss()
 	{
 		foreach($this->t_config->css as $file)
 		{
@@ -62,7 +62,7 @@ class MyTemplate
 		}
 	}
 
-	private function addJs()
+	public function addJs()
 	{
 		foreach($this->t_config->js as $file)
 		{

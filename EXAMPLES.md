@@ -36,3 +36,9 @@ $user = new MyUser();
 $user->setName("Lerie");
 $user->setSession(session_regenerate_id());
 ```
+
+## Templates
+```
+$t = new MyTemplate("templates\\cover.config");
+echo $t->getHtml();
+```
