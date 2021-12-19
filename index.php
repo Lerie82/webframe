@@ -40,11 +40,12 @@ $movie = new MyMovie();
 $movie->setIMDBID("tt0052520");
 $movie->fillFromIMDB();
 
-/// new plugin
-$plugin = new MyPlugin();
+/// directory watcher
+$watcher = new MyDirWatcher();
+$watcher->addDir("cache/");
 
+/// templates
+$t = new MyTemplate("templates\\default.config");
 
-/// 
-
-die(var_dump($blog));
+echo $t->getHtml();
 ?>
