@@ -44,7 +44,10 @@ $movie->fillFromIMDB();
 $watcher = new MyDirWatcher();
 $watcher->addDir("cache/");
 
-/// templates
-$t = new MyDashboard("templates\\dashboard.config");
-echo $t->getHtml();
+/// electrical components
+$iecom = new MyEComponent();
+$iecom->setType("battery");
+$iecom->setName("battery");
+
+die(var_dump($iecom));
 ?>
