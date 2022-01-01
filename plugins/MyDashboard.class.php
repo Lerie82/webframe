@@ -18,7 +18,7 @@ class MyDashboard
 
 		$this->addBlock("<!doctype html><html lang=\"en\"><head>");
 		$this->addBlock("<meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\"><meta name=\"description\" content=\"\"><meta name=\"author\" content=\"\">\n");
-		$this->addBlock("<title>".$this->t_config->title."</title>");
+		$this->addBlock("<title>".$this->t_config->strings->title."</title>");
 		$this->addCss();
 		$this->addBlock('  <body>
     <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
