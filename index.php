@@ -45,9 +45,9 @@ $watcher = new MyDirWatcher();
 $watcher->addDir("cache/");
 
 /// electrical components
-$iecom = new MyEComponent();
-$iecom->setType("battery");
-$iecom->setName("battery");
+$battery = new MyBattery();
+$battery->setType("battery");
+$battery->setName("battery");
 
-die(var_dump($iecom));
+die(var_dump($battery));
 ?>
