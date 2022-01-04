@@ -69,5 +69,26 @@ class MyDb implements IDb
           $stmt = $this->pdo->query($q);
           return $stmt->fetchAll();
 	}
+
+     public function preparedInsert($tbl, $fields)
+     {
+          $field_names = "";
+          $prep_names = "";
+          $sql = "INSERT INTO ".$tbl." (";
+
+          foreach ($fields as $key => $value)
+          {
+               $field_names .= $key.",";
+               $prep_names .= ":".$key.",";
+          }
+
+          $field_names = rtrim($field_names, ',');
+          $prep_names = rtrim($prep_names, ',');
+
+          $sql .= $field_names.") VALUES (".$prep_names.")";
+
+          $stmt= $this->pdo->prepare($sql);
+          $stmt->execute($fields);
+     }
 }
 ?>

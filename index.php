@@ -23,7 +23,7 @@ $user->setAuthLevel(0);
 
 /// query the database
 $db = new MyDB();
-$results1 = $db->queryForCols("web","id,ip");
+$results1 = $db->queryForCols("web","ip,url");
 
 /// a new product
 $prod = new MyProduct();
@@ -37,7 +37,7 @@ $blog->updatePost("my blog title", "hello world!", "Lerie Taylor");
 
 /// new movie
 $movie = new MyMovie();
-$movie->setIMDBID("tt0052520");
+$movie->setIMDBID("tt0103064");
 $movie->fillFromIMDB();
 
 /// directory watcher
@@ -49,5 +49,5 @@ $battery = new MyBattery();
 $battery->setType("battery");
 $battery->setName("battery");
 
-die(var_dump($battery));
+die(var_dump($results1));
 ?>

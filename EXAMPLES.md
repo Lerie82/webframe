@@ -11,6 +11,18 @@ spl_autoload_register(function ($class)
 $db = new MyDB();
 $results1 = $db->queryForCols("web","id,ip");
 ```
+
+#### Prepared Inserts
+```
+$data = [
+    'username' => "test",
+    'email' => 'email@email.com'
+];
+
+$db = new Db();
+$db->preparedInsert("users", $data);
+```
+
 ## Movies
 You can create new movies and try to get their info from IMDB.
 ```
