@@ -28,7 +28,7 @@ class MyRestApi implements IRestApi
 	
 	public function fetch($ep_id)
 	{
-		$spider = new MyScraper();
+		//$spider = new MyScraper();
 		//return $this->
 	}
 }

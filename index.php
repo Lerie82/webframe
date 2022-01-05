@@ -49,5 +49,7 @@ $battery = new MyBattery();
 $battery->setType("battery");
 $battery->setName("battery");
 
-die(var_dump($results1));
+/// dashboard
+$dash = new MyDashboard("templates/dashboard.config");
+$dash_html = $dash->getHtml();
 ?>
