@@ -52,4 +52,9 @@ $battery->setName("battery");
 /// dashboard
 $dash = new MyDashboard("templates/dashboard.config");
 $dash_html = $dash->getHtml();
+
+$temp = new MyTemplate("templates/cover.config");
+//echo $temp->getHtml();
+
+echo $battery;
 ?>
